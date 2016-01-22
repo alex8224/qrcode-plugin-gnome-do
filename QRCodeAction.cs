@@ -71,8 +71,7 @@ namespace QRCode
 			
 			ITextItem item = items.First () as ITextItem;
 
-			String qrcode_content = item.Text;http://www.apk.anzhi.com/data3/apk/201509/25/59b889fe34ff222aa82ebc7ab582aeac_33177100.apk
-			Console.WriteLine("==============qrcode string is " + qrcode_content);
+			String qrcode_content = item.Text;
 			Process qrencode = System.Diagnostics.Process.Start ("/usr/bin/qrencode", String.Format("-s 6 -o /tmp/qrcode.png {0}", qrcode_content));
 			qrencode.WaitForExit ();
 			Process feh = System.Diagnostics.Process.Start("/usr/bin/qiv", "/tmp/qrcode.png");
